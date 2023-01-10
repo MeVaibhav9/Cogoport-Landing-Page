@@ -1,12 +1,1184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cogoport - Book & Manage Shipments & Cargo Online</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+    <div>
+        <div class="header">
+            <div role="presentation">
+                <button type="button" class="navButton">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="16"
+                        height="16" role="img">
+                        <path
+                            d="M1.781 1.793c-.355.123-.539.395-.516.761a.731.731 0 0 0 .477.642c.126.047.155.047 5.258.047s5.132 0 5.258-.047a.752.752 0 0 0 .306-1.184.807.807 0 0 0-.239-.174l-.156-.076-5.134-.006c-4.887-.004-5.139-.003-5.254.037m-.023 4.503c-.62.215-.672 1.084-.083 1.374l.133.065h10.384l.133-.065c.55-.27.55-1.07 0-1.34l-.133-.065-5.157-.005c-4.903-.005-5.163-.003-5.277.036m-.023 4.509a.724.724 0 0 0-.469.652.691.691 0 0 0 .409.705l.156.076h10.338l.156-.076a.694.694 0 0 0 .41-.706.602.602 0 0 0-.078-.3.786.786 0 0 0-.399-.352c-.126-.047-.154-.047-5.265-.046-5.061.001-5.14.002-5.258.047"
+                            fill-rule="evenodd">
+
+                        </path>
+                    </svg>
+                </button>
+            </div>
+            <div tabindex="0" role="button" class="logoContainer">
+                <a href="/en-IN">
+                    <img src="images/cogoportLogo.svg" alt="">
+                </a>
+            </div>
+            <nav class="navBar">
+                <ul class="navList">
+                    <li class="navItems" aria-expanded="false">
+                        <div role="button" tabindex="0" class="innerNavItems">
+                            <span>Products</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em"
+                                height="1em" role="img" style="margin-left: 4px; font-size: 10px;">
+                                <path
+                                    d="M1.989 4.052a.55.55 0 0 0-.286.449c0 .199-.084.109 2.518 2.716 1.488 1.492 2.501 2.489 2.557 2.519a.516.516 0 0 0 .444 0c.056-.03 1.069-1.027 2.557-2.519 2.606-2.612 2.518-2.516 2.518-2.719a.536.536 0 0 0-.285-.44c-.085-.044-.211-.045-5.017-.044-4.47 0-4.937.004-5.006.038"
+                                    fill-rule="evenodd">
+
+                                </path>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="navItems" aria-expanded="false">
+                        <div role="button" tabindex="0" class="innerNavItems">
+                            <span>Partners</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em"
+                                height="1em" role="img" style="margin-left: 4px; font-size: 10px;">
+                                <path
+                                    d="M1.989 4.052a.55.55 0 0 0-.286.449c0 .199-.084.109 2.518 2.716 1.488 1.492 2.501 2.489 2.557 2.519a.516.516 0 0 0 .444 0c.056-.03 1.069-1.027 2.557-2.519 2.606-2.612 2.518-2.516 2.518-2.719a.536.536 0 0 0-.285-.44c-.085-.044-.211-.045-5.017-.044-4.47 0-4.937.004-5.006.038"
+                                    fill-rule="evenodd">
+                                </path>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="navItems" aria-expanded="false">
+                        <div role="button" tabindex="0" class="innerNavItems">
+                            <span>Company</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em"
+                                height="1em" role="img" style="margin-left: 4px; font-size: 10px;">
+                                <path
+                                    d="M1.989 4.052a.55.55 0 0 0-.286.449c0 .199-.084.109 2.518 2.716 1.488 1.492 2.501 2.489 2.557 2.519a.516.516 0 0 0 .444 0c.056-.03 1.069-1.027 2.557-2.519 2.606-2.612 2.518-2.516 2.518-2.719a.536.536 0 0 0-.285-.44c-.085-.044-.211-.045-5.017-.044-4.47 0-4.937.004-5.006.038"
+                                    fill-rule="evenodd">
+
+                                </path>
+                            </svg>
+                        </div>
+                    </li>
+                    <li class="navItems" aria-expanded="false">
+                        <div role="button" tabindex="0" class="innerNavItems">
+                            <span>Knowledge Center</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em"
+                                height="1em" role="img" style="margin-left: 4px; font-size: 10px;">
+                                <path
+                                    d="M1.989 4.052a.55.55 0 0 0-.286.449c0 .199-.084.109 2.518 2.716 1.488 1.492 2.501 2.489 2.557 2.519a.516.516 0 0 0 .444 0c.056-.03 1.069-1.027 2.557-2.519 2.606-2.612 2.518-2.516 2.518-2.719a.536.536 0 0 0-.285-.44c-.085-.044-.211-.045-5.017-.044-4.47 0-4.937.004-5.006.038"
+                                    fill-rule="evenodd">
+
+                                </path>
+                            </svg>
+                        </div>
+                    </li>
+                    <a href="/en-IN/contact-us">
+                        <li class="aStyling">Contact Us</li>
+                    </a>
+                </ul>
+            </nav>
+            <ul class="registerContainer">
+                <li class="registerLogin" role="presentation">
+                    <img src="images/emojiLogin.svg" alt="">
+                    login
+                </li>
+                <li class="registerSign" role="presentation">
+                    <button class="registerSignUp" type="button">
+                <li>Sign Up</li>
+                </button>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="showcase">
+            <div class="innerShowcase">
+                <div class="textShowcase">
+                    <h1>Grow Faster, Go Global.</h1>
+                    <p class="paragraph">
+                        Strengthen your Supply Chain, and Scale your Business<br> with Reliable Shipping and
+                        Cashflows.
+                    </p>
+                    <a href="#">
+                        <button class="buttonShowcase " type="button"><span>Get Started</span>
+                        </button>
+                    </a>
+                </div>
+                <img class="imageShowcase" src="https://cdn.cogoport.io/cms-prod/vault/original/home-banner-image1.webp"
+                    alt="" height="500">
+            </div>
+        </div>
+
+        <!-- Second Section -->
+
+        <div class="showcase2">
+            <div class="innerShowcase2">
+                <h2 class="headingShowcase">
+                    <span>110</span>+
+                </h2>
+                <h4>Countries Served</h4>
+            </div>
+            <div class="innerShowcase2">
+                <h2 class="headingShowcase">
+                    <span>8,000</span>
+                </h2>
+                <h4>Ports Pairs Served</h4>
+            </div>
+            <div class="innerShowcase2">
+                <h2 class="headingShowcase">
+                    <span>12,500</span>
+                </h2>
+                <h4>Tons of Air Cargo Moved</h4>
+            </div>
+            <div class="innerShowcase2">
+                <h2 class="headingShowcase">
+                    <span>500,000</span>
+                </h2>
+                <h4>Containers Moved</h4>
+            </div>
+        </div>
+
+        <!-- Blank Space -->
+
+        <div class="whiteSpace">
+
+        </div>
+
+        <!-- Section 2 -> 2 mini sections -->
+
+        <div class="showcase3">
+            <div class="innershowcase1">
+                <div class="sections">
+                    <div class="text">
+                        <h2>One Stop Solution for Your Supply Chain</h2>
+                        <p>Connected Shipping, Finance, and Trade-tech, to Power Global Trade and Supply Chains.</p>
+                    </div>
+
+                    <div class="imageSection">
+                        <img src="https://cdn.cogoport.io/cms-prod/vault/original/map-supply-chain.png"
+                            alt="product check" class="imageSection">
+                    </div>
+                </div>
+            </div>
+
+            <div class="innershowcase2">
+                <h3 class="headingInnerShowcase">Our Products</h3>
+                <div class="innerSection1">
+                    <div class="insideInnerSection">
+                        <div class="parts">
+                            <h4 class="cardHeading">End to End Cross Border Logistics</h4>
+                            <div class="cardIcons">
+                                <a href="#">
+                                    <div class="boxes">
+                                        <img src="images/img1.svg" alt="">
+                                        <h4 class="boxHeading">Ocean: FCL</h4>
+                                        <span role="presentation" class="addMore">
+                                            <span class="findMore">Find Out More </span>
+                                            <!-- <img src="images/arrow.svg" alt=""> -->
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 14 14" width="1em" height="1em" role="img"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                    fill-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="boxes">
+                                        <img src="images/img2.svg" alt="">
+                                        <h4 class="boxHeading">Ocean: LCL</h4><span role="presentation"
+                                            class="addMore"><span class="findMore">Find Out
+                                                More </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 14 14" width="1em" height="1em" role="img"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                    fill-rule="evenodd"></path>
+                                            </svg></span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="boxes">
+                                        <img src="images/img3.svg" alt="">
+                                        <h4 class="boxHeading">International Air</h4><span role="presentation"
+                                            class="addMore"><span class="findMore">Find Out More </span><svg
+                                                xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 14 14" width="1em" height="1em" role="img"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                    fill-rule="evenodd"></path>
+                                            </svg></span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="boxes">
+                                        <img src="images/img4.svg" alt="">
+                                        <h4 class="boxHeading">Customs, CFS, &amp; Handling</h4><span
+                                            role="presentation" class="addMore"><span class="findMore">Find Out More
+                                            </span><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 14 14" width="1em" height="1em" role="img"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                    fill-rule="evenodd"></path>
+                                            </svg></span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="parts">
+                            <h4 class="cardHeading">Domestic Logistics</h4>
+                            <div class="cardIcons">
+                                <a href="#">
+                                    <div class="boxes">
+                                        <img src="images/img5.svg" alt="">
+                                        <h4 class="boxHeading">FTL, PTL</h4><span role="presentation"
+                                            class="addMore"><span class="findMore">Find Out
+                                                More </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 14 14" width="1em" height="1em" role="img"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                    fill-rule="evenodd"></path>
+                                            </svg></span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="boxes">
+                                        <img src="images/img6.svg" alt="">
+                                        <h4 class="boxHeading">Trailer &amp; Rail Container Haulage</h4>
+                                        <span role="presentation" class="addMore"><span class="findMore">Find Out More
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 14 14" width="1em" height="1em" role="img"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                    fill-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="parts">
+                            <h4 class="cardHeading">Supply Chain Solutions</h4>
+                            <div class="cardIcons">
+                                <a href="#">
+                                    <div class="boxes">
+                                        <img src="images/img7.svg" alt="">
+                                        <h4 class="boxHeading">CogoAssured</h4><span role="presentation"
+                                            class="addMore"><span class="findMore">Find Out
+                                                More </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 14 14" width="1em" height="1em" role="img"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                    fill-rule="evenodd"></path>
+                                            </svg></span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="boxes">
+                                        <img src="images/img8.svg" alt="">
+                                        <h4 class="boxHeading">Domestic Fulfilment</h4>
+                                        <span role="presentation" class="addMore">
+                                            <span class="findMore">Find Out More
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 14 14" width="1em" height="1em" role="img"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                    fill-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="boxes">
+                                        <img src="images/img9.svg" alt="">
+                                        <h4 class="boxHeading">Door to Door Shipments</h4>
+                                        <span role="presentation" class="addMore">
+                                            <span class="findMore">Find Out More
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 14 14" width="1em" height="1em" role="img"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                    fill-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="parts">
+                            <h4 class="cardHeading">Financial Services</h4>
+                            <div class="cardIcons">
+                                <a href="#">
+                                    <div class="boxes">
+                                        <img src="images/img10.svg" alt="">
+                                        <h4 class="boxHeading">Pay Later</h4>
+                                        <span role="presentation" class="addMore">
+                                            <span class="findMore">Find Out
+                                                More
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 14 14" width="1em" height="1em" role="img"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                    fill-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="boxes">
+                                        <img src="images/img11.svg" alt="">
+                                        <h4 class="boxHeading">Export Factoring</h4>
+                                        <span role="presentation" class="addMore"><span class="findMore">Find Out More
+                                            </span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                viewBox="0 0 14 14" width="1em" height="1em" role="img"
+                                                style="margin-right: 5px;">
+                                                <path
+                                                    d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                    fill-rule="evenodd"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Trusted By Section -->
+
+        <div class="showcase4">
+            <h3 class="heading">Trusted by</h3>
+            <div class="section">
+                <div class="subsection">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/ais-logo-1.webp" alt="chemical">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/jsw-logo-new.webp" alt="paracetamol">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/bombay-dyeing-logo-1.webp"
+                        alt="electronics">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/air-asia-logo-1.webp" alt="whitegoods">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/tvs-logo-1.webp" alt="textiles">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/voltas-logo-1.webp" alt="manufactoring">
+                </div>
+                <div aria-hidden="true" class="subsection">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/ais-logo-1.webp" alt="chemical">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/jsw-logo-new.webp" alt="paracetamol">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/bombay-dyeing-logo-1.webp"
+                        alt="electronics">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/air-asia-logo-1.webp" alt="whitegoods">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/tvs-logo-1.webp" alt="textiles">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/voltas-logo-1.webp" alt="manufactoring">
+                </div>
+            </div>
+        </div>
+
+        <!-- Get Started Section -->
+
+        <div class="showcase5">
+            <div class="innerShowcase">
+                <div class="section1">
+                    <h3>Ready to take your Supply Chain to the Next Level?</h3>
+                </div>
+                <a target="_blank" href="#" style="text-decoration: none;">
+                    <button class="button" type="button">
+                        <div class="section2">Get Started
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14" width="1em"
+                                height="1em" role="img" style="margin-left: 5px; margin-top: 2px;">
+                                <path
+                                    d="M4.375 1.724a.64.64 0 0 0-.12.045.639.639 0 0 0-.239.319c-.019.073-.026 1.483-.026 4.918 0 4.214.004 4.83.035 4.933a.532.532 0 0 0 .476.358c.199 0 .109.084 2.716-2.518 1.492-1.488 2.489-2.501 2.519-2.557a.533.533 0 0 0 .008-.432c-.054-.106-4.9-4.96-5.008-5.016a.612.612 0 0 0-.361-.05"
+                                    fill-rule="evenodd">
+
+                                </path>
+                            </svg>
+                        </div>
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- How It Works -->
+
+        <div class="showcase55">
+            <div class="mainContainer">
+                <h3 class="heading">How it Works</h3>
+                <div class="containerButton">
+                    <button class="button" type="button"><span>For Cargo Owners</span>
+                    </button>
+                    <!-- <button
+                        class="styles_inactive__Rq_Bh styles-module_container__nBRuU ui_button_container ui_ps_size_md ui_ps_themeType_primary"
+                        type="button"><span>For Logistics Partners</span>
+                    </button> -->
+                </div>
+                <div>
+                    <div class="containerStyling">
+
+                        <!-- <div class="styles_imagecontainermobile__57eRt"><img src="https://cdn.cogoport.io/cms-prod/vault/original/homepagem1.png" alt="cargo.alt1"
+                                class="styles_image__cFHAa">
+                        </div> -->
+                        <div>
+                            <div class="stages stage1">
+                                <p class="pStyling">Stage 1:</p>
+                                <div class="heading">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 14 14" width="40" height="40" role="img">
+                                        <path stroke="#221F1F" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="0.264" d="M12.613 7h-1.576"></path>
+                                        <path fill="#FBDC00" stroke="#221F1F" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="0.264"
+                                            d="M7 12.85a5.85 5.85 0 1 0 0-11.7 5.85 5.85 0 0 0 0 11.7Z"></path>
+                                        <path fill="#fff" stroke="#221F1F" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="0.264"
+                                            d="M9.383 4.371 5.72 5.652a.11.11 0 0 0-.068.068L4.37 9.383a.21.21 0 0 0 .246.246L8.28 8.348a.109.109 0 0 0 .068-.068l1.28-3.663a.21.21 0 0 0-.245-.246Z">
+                                        </path>
+                                        <path fill="#221F1F" d="M7 7.762a.762.762 0 1 0 0-1.524.762.762 0 0 0 0 1.524Z">
+                                        </path>
+                                        <path stroke="#221F1F" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="0.264" d="M7 1.387v1.576m0 9.65v-1.576M1.387 7h1.576"></path>
+                                    </svg>
+                                    <div>Discover</div>
+                                </div>
+                                <span>
+                                    <div>•</div>
+                                    <p class="para">Spot and Contract Rates for Logistics</p>
+                                </span>
+                                <span>
+                                    <div>•</div>
+                                    <p class="para">Service details, Trade Compliance/ Regulatory
+                                        Requirements</p>
+                                </span>
+                                <span>
+                                    <div>•</div>
+                                    <p class="para">Knowledge and Insights on Trade, Logistics, Finance,
+                                        Supply Chains</p>
+                                </span>
+                            </div>
+                            <div class="arrow1">
+                                <img src="https://cdn.cogoport.io/cms-prod/vault/original/linearrow1.png" alt="line for stages" class="imageStyling">
+                            </div>
+
+                            <div class="stages stage2">
+                                <p class="pStyling">Stage 2:</p>
+                                <div class="heading">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 14 14" width="40" height="40" role="img">
+                                        <path fill="#FBDC00" stroke="#221F1F" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="0.374"
+                                            d="M9.37 1.851c0-.36-.276-.651-.617-.651-.34 0-.617.291-.617.651v1.307c0 .36.276.65.617.65.341.001.618-.29.618-.65V1.851Z">
+                                        </path>
+                                        <g stroke="#221F1F" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="0.374">
+                                            <path fill="#FBDC00"
+                                                d="M9.935 2.2h-5.87c-.515 0-.932.44-.932.981v8.638c0 .542.417.981.932.981h5.87c.515 0 .932-.44.932-.981V3.18c0-.542-.417-.981-.932-.981Z">
+                                            </path>
+                                            <path fill="#FBDC00"
+                                                d="M5.864 1.851c0-.36-.276-.651-.617-.651-.341 0-.618.291-.618.651v1.307c0 .36.277.65.618.65.34.001.617-.29.617-.65V1.851Z">
+                                            </path>
+                                            <path d="M6.366 5.78h2.908M6.366 8.095h2.908M6.366 10.41h2.908"></path>
+                                            <path fill="#fff"
+                                                d="M4.749 6.525c.39 0 .707-.334.707-.745s-.317-.745-.707-.745c-.39 0-.707.334-.707.745s.317.745.707.745Zm0 2.315c.39 0 .707-.334.707-.745s-.317-.745-.707-.745c-.39 0-.707.334-.707.745s.317.745.707.745Zm0 2.314c.39 0 .707-.333.707-.745 0-.411-.317-.744-.707-.744-.39 0-.707.333-.707.744 0 .412.317.745.707.745Z">
+                                            </path>
+                                        </g>
+                                    </svg>
+                                    <div>Plan &amp; Book</div>
+                                </div><span>
+                                    <div>•</div>
+                                    <p class="para">Route, Service Schedules, Inventory, and Cashflow
+                                        planning</p>
+                                </span><span>
+                                    <div>•</div>
+                                    <p class="para">Book with upfront visibility of service terms and
+                                        inclusions</p>
+                                </span>
+                            </div>
+                            <div class="arrow2"><img src="https://cdn.cogoport.io/cms-prod/vault/original/linearrow2.png" alt="line for stages" class="imageStyling">
+                            </div>
+                        </div>
+                        <div class="compImage"><img
+                                src="https://cdn.cogoport.io/cms-prod/vault/original/homepagem1.png"
+                                alt="cogoport platform with rate search" class="image"></div>
+                        <div>
+                            <div class="arrow3"><img
+                                    src="https://cdn.cogoport.io/cms-prod/vault/original/linearrow.png"
+                                    alt="line for stages" class="imageStyling"></div>
+                            <div class="stages stage3">
+                                <p class="pStyling">Stage 3:</p>
+                                <div class="heading">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 14 14" width="40" height="40" role="img">
+                                        <path fill="#FBDC00"
+                                            d="M12.749 10.698V4.715a.967.967 0 0 0-.967-.967H2.219a.967.967 0 0 0-.968.967v5.983c0 .534.433.968.968.968h9.563a.967.967 0 0 0 .967-.968Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M12.895 4.529v6.355a.927.927 0 0 1-.927.927H2.032a.927.927 0 0 1-.927-.927V4.53a.927.927 0 0 1 .927-.927h9.936a.927.927 0 0 1 .927.927ZM1.397 10.884a.636.636 0 0 0 .635.635h9.936a.635.635 0 0 0 .635-.634V4.529a.636.636 0 0 0-.635-.635H2.032a.636.636 0 0 0-.635.635v6.355Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M12.749 5.85h-11.5a.145.145 0 0 1-.144-.147.144.144 0 0 1 .145-.145h11.498a.145.145 0 0 1 .144.145.144.144 0 0 1-.143.147Z">
+                                        </path>
+                                        <path fill="#fff" d="M5.396 2.335H3.682v2.388h1.714V2.335Z"></path>
+                                        <path fill="#231F20"
+                                            d="M3.68 2.189h1.715a.144.144 0 0 1 .145.144v2.39a.144.144 0 0 1-.145.144H3.68a.144.144 0 0 1-.144-.145V2.333a.144.144 0 0 1 .144-.144Zm1.57.291H3.827v2.097H5.25V2.48Z">
+                                        </path>
+                                        <path fill="#fff" d="M10.318 2.335H8.604v2.388h1.714V2.335Z"></path>
+                                        <path fill="#231F20"
+                                            d="M8.603 2.189h1.715a.145.145 0 0 1 .145.144v2.39a.144.144 0 0 1-.145.144H8.603a.144.144 0 0 1-.144-.145V2.333a.144.144 0 0 1 .144-.144Zm1.57.291H8.75v2.097h1.423V2.48Z">
+                                        </path>
+                                        <path fill="#fff" d="M4.07 6.675H2.397v1.673h1.674V6.675Z"></path>
+                                        <path fill="#231F20"
+                                            d="M2.396 6.53H4.07a.144.144 0 0 1 .145.144v1.674a.144.144 0 0 1-.145.145H2.396a.144.144 0 0 1-.145-.145V6.674a.144.144 0 0 1 .145-.145Zm1.527.29h-1.38v1.383h1.382L3.923 6.82Z">
+                                        </path>
+                                        <path fill="#fff" d="M6.655 6.675H4.982v1.673h1.673V6.675Z"></path>
+                                        <path fill="#231F20"
+                                            d="M4.981 6.53h1.675a.144.144 0 0 1 .144.144v1.674a.144.144 0 0 1-.144.145H4.98a.144.144 0 0 1-.144-.145V6.674a.144.144 0 0 1 .144-.145Zm1.528.29h-1.38v1.383h1.38V6.82Z">
+                                        </path>
+                                        <path fill="#fff" d="M9.24 6.675H7.568v1.673h1.674V6.675Z"></path>
+                                        <path fill="#231F20"
+                                            d="M7.566 6.53h1.675a.144.144 0 0 1 .144.144v1.674a.144.144 0 0 1-.144.145H7.566a.144.144 0 0 1-.144-.145V6.674a.144.144 0 0 1 .144-.145Zm1.528.29h-1.38v1.383h1.38V6.82Z">
+                                        </path>
+                                        <path fill="#fff" d="M11.825 6.675h-1.673v1.673h1.673V6.675Z"></path>
+                                        <path fill="#231F20"
+                                            d="M10.151 6.53h1.675a.144.144 0 0 1 .144.144v1.674a.146.146 0 0 1-.089.134.144.144 0 0 1-.055.01H10.15a.144.144 0 0 1-.144-.144V6.674a.144.144 0 0 1 .144-.145Zm1.528.29h-1.38v1.383h1.381l-.001-1.382Z">
+                                        </path>
+                                        <path fill="#fff" d="M4.07 9.098H2.397v1.673h1.674V9.098Z"></path>
+                                        <path fill="#231F20"
+                                            d="M2.396 8.953H4.07a.144.144 0 0 1 .145.144v1.675a.144.144 0 0 1-.145.144H2.396a.144.144 0 0 1-.145-.145V9.098a.144.144 0 0 1 .145-.144Zm1.527.291h-1.38v1.382h1.382l-.002-1.382Z">
+                                        </path>
+                                        <path fill="#fff" d="M6.655 9.098H4.982v1.673h1.673V9.098Z"></path>
+                                        <path fill="#231F20"
+                                            d="M4.981 8.953h1.675a.144.144 0 0 1 .144.144v1.675a.144.144 0 0 1-.144.144H4.98a.144.144 0 0 1-.144-.145V9.098a.144.144 0 0 1 .144-.144Zm1.528.291h-1.38v1.382h1.38V9.244Z">
+                                        </path>
+                                        <path fill="#fff" d="M9.24 9.098H7.568v1.673h1.674V9.098Z"></path>
+                                        <path fill="#231F20"
+                                            d="M7.566 8.953h1.675a.144.144 0 0 1 .144.144v1.675a.144.144 0 0 1-.144.144H7.566a.144.144 0 0 1-.144-.145V9.098a.144.144 0 0 1 .144-.144Zm1.528.291h-1.38v1.382h1.38V9.244Z">
+                                        </path>
+                                        <path fill="#fff" d="M11.825 9.098h-1.673v1.673h1.673V9.098Z"></path>
+                                        <path fill="#231F20"
+                                            d="M10.151 8.953h1.675a.144.144 0 0 1 .144.144v1.675a.145.145 0 0 1-.144.144H10.15a.144.144 0 0 1-.133-.09.145.145 0 0 1-.011-.055V9.098a.144.144 0 0 1 .144-.144Zm1.528.291h-1.38v1.382h1.381l-.001-1.382Zm-3.948-.915a.145.145 0 0 1-.135-.09.144.144 0 0 1 .032-.159l1.51-1.508a.145.145 0 0 1 .205 0 .144.144 0 0 1 0 .206L7.835 8.286a.144.144 0 0 1-.104.043Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M9.155 8.407a.144.144 0 0 1-.103-.042L7.464 6.778a.144.144 0 0 1 0-.206.144.144 0 0 1 .206 0L9.257 8.16a.144.144 0 0 1-.102.248ZM5.16 10.739a.144.144 0 0 1-.103-.043.144.144 0 0 1 0-.206l1.496-1.495a.144.144 0 0 1 .206 0 .144.144 0 0 1 0 .206l-1.495 1.495a.145.145 0 0 1-.104.043Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M6.348 10.61a.142.142 0 0 1-.103-.043L4.879 9.201a.144.144 0 0 1 0-.206.144.144 0 0 1 .207 0l1.365 1.366a.144.144 0 0 1-.103.249Z">
+                                        </path>
+                                    </svg>
+                                    <div>Execute</div>
+                                </div><span>
+                                    <div>•</div>
+                                    <p class="para">Ocean and Air Cargo Tracking</p>
+                                </span><span>
+                                    <div>•</div>
+                                    <p class="para">Documentation and Filings, Handled</p>
+                                </span><span>
+                                    <div>•</div>
+                                    <p class="para">Multi-modal: Smooth coordination and handovers between
+                                        various service providers and stakeholders</p>
+                                </span>
+                            </div>
+                            <div class="arrow4"><img src="https://cdn.cogoport.io/cms-prod/vault/original/linearrow4.png" alt="cargo.alt1" class="imageStyling">
+                            </div>
+
+                            <div class="stages">
+                                <p class="pStyling">Stage 4:</p>
+                                <div class="heading">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 14 14" width="40" height="40" role="img">
+                                        <path
+                                            d="M9.545 10.056a.107.107 0 0 1-.076-.031l-.636-.636a.107.107 0 0 1 0-.15.107.107 0 0 1 .15 0l.636.636a.107.107 0 0 1 0 .15.107.107 0 0 1-.074.031Zm.932-2.403h-.92a.108.108 0 1 1 0-.215h.92a.108.108 0 0 1 0 .215ZM8.738 5.947a.107.107 0 0 1-.075-.032.107.107 0 0 1 0-.15l.488-.487a.107.107 0 0 1 .15 0 .108.108 0 0 1 0 .15l-.489.487a.108.108 0 0 1-.074.032ZM7.032 5.28a.108.108 0 0 1-.107-.107v-1.36a.107.107 0 1 1 .215 0v1.359a.107.107 0 0 1-.107.108Zm-1.647.725a.107.107 0 0 1-.076-.031l-.546-.546a.108.108 0 0 1 0-.15.108.108 0 0 1 .15 0l.546.546a.107.107 0 0 1 0 .15.107.107 0 0 1-.074.031Zm-.767 1.648h-1.45a.108.108 0 1 1 0-.215h1.45a.107.107 0 0 1 0 .215Zm.076 2.337a.108.108 0 0 1-.075-.031.108.108 0 0 1 0-.15l.556-.557a.107.107 0 0 1 .15 0 .107.107 0 0 1 0 .15l-.557.557a.108.108 0 0 1-.074.032Zm2.338 1.108a.108.108 0 0 1-.107-.108v-.918a.107.107 0 0 1 .107-.108.108.108 0 0 1 .108.107v.921a.107.107 0 0 1-.107.105Z"
+                                            fill="#231F20"></path>
+                                        <path fill="#FBDC00" d="M7.032 4.074a.92.92 0 1 0 0-1.84.92.92 0 0 0 0 1.84Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M7.033 4.183a1.03 1.03 0 0 1-.727-1.755 1.029 1.029 0 0 1 1.755.727 1.03 1.03 0 0 1-1.028 1.028Zm0-1.841a.814.814 0 1 0 0 1.627.814.814 0 0 0 0-1.627Z">
+                                        </path>
+                                        <path fill="#FBDC00"
+                                            d="M7.025 12.892a.92.92 0 1 0 0-1.841.92.92 0 0 0 0 1.841Z"></path>
+                                        <path fill="#231F20"
+                                            d="M7.025 13a1.03 1.03 0 0 1-.727-1.755 1.03 1.03 0 0 1 1.755.727A1.03 1.03 0 0 1 7.025 13Zm0-1.841a.814.814 0 0 0 0 1.626.814.814 0 0 0 0-1.626Z">
+                                        </path>
+                                        <path fill="#FBDC00" d="M11.535 8.466a.92.92 0 1 0 0-1.841.92.92 0 0 0 0 1.84Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M11.535 8.573a1.03 1.03 0 0 1-.726-1.754 1.03 1.03 0 0 1 1.453 0 1.03 1.03 0 0 1 0 1.453 1.03 1.03 0 0 1-.727.301Zm0-1.84a.813.813 0 1 0 .001 1.626.813.813 0 0 0-.001-1.627Z">
+                                        </path>
+                                        <path fill="#FBDC00" d="M2.465 8.466a.92.92 0 1 0 0-1.842.92.92 0 0 0 0 1.842Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M2.465 8.573a1.03 1.03 0 0 1-.726-1.754 1.03 1.03 0 0 1 1.452 0 1.03 1.03 0 0 1 0 1.453 1.03 1.03 0 0 1-.726.301Zm0-1.84a.814.814 0 0 0 0 1.625.814.814 0 0 0 0-1.626Z">
+                                        </path>
+                                        <path fill="#fff" d="M4.264 5.466a.69.69 0 1 0 0-1.38.69.69 0 0 0 0 1.38Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M4.263 5.574A.796.796 0 0 1 3.7 4.212a.793.793 0 0 1 .87-.174.792.792 0 0 1 .432.433.792.792 0 0 1 0 .61.793.793 0 0 1-.738.493Zm0-1.38a.58.58 0 0 0-.582.582.584.584 0 1 0 .582-.582Z">
+                                        </path>
+                                        <path fill="#fff" d="M10.017 11.082a.69.69 0 1 0 0-1.381.69.69 0 0 0 0 1.381Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M10.017 11.187a.792.792 0 0 1-.738-.493.792.792 0 0 1 0-.61.793.793 0 0 1 .738-.492.8.8 0 0 1 .564.232.8.8 0 0 1-.564 1.363Zm0-1.38a.581.581 0 1 0 0 1.165.58.58 0 1 0 0-1.163v-.002Z">
+                                        </path>
+                                        <path fill="#fff" d="M9.802 5.466a.69.69 0 1 0 0-1.38.69.69 0 0 0 0 1.38Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M9.802 5.574a.796.796 0 0 1-.738-1.103.793.793 0 0 1 .432-.433.792.792 0 0 1 .611 0 .791.791 0 0 1 .432.433.792.792 0 0 1 0 .61.793.793 0 0 1-.432.433c-.097.04-.2.06-.305.06Zm0-1.38a.58.58 0 0 0-.583.582.58.58 0 0 0 .583.583.583.583 0 0 0 0-1.165Z">
+                                        </path>
+                                        <path fill="#fff" d="M4.217 11.052a.69.69 0 1 0 0-1.382.69.69 0 0 0 0 1.382Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="M4.217 11.159a.79.79 0 0 1-.564-.234.793.793 0 0 1-.174-.87.8.8 0 0 1 1.476.611.793.793 0 0 1-.432.433.802.802 0 0 1-.306.06Zm0-1.38a.582.582 0 1 0-.001 1.163.582.582 0 0 0 .001-1.164Z">
+                                        </path>
+                                        <path fill="#fff"
+                                            d="M7.01 9.978a2.393 2.393 0 1 0 0-4.786 2.393 2.393 0 0 0 0 4.786Z"></path>
+                                        <path fill="#231F20"
+                                            d="M7.01 10.084a2.503 2.503 0 0 1-2.5-2.5 2.503 2.503 0 0 1 2.5-2.5 2.504 2.504 0 0 1 2.5 2.5 2.503 2.503 0 0 1-2.5 2.5Zm0-4.786a2.288 2.288 0 0 0-2.285 2.285A2.288 2.288 0 0 0 7.011 9.87a2.288 2.288 0 0 0 2.285-2.285A2.288 2.288 0 0 0 7.011 5.3v-.002Z">
+                                        </path>
+                                        <path fill="#FFF2EE" d="M7.96 7.155h-.357v1.256h.357V7.156Z"></path>
+                                        <path fill="#231F20"
+                                            d="M8.068 8.519h-.573V7.048h.573v1.471Zm-.357-.216h.141v-1.04h-.141v1.04Z">
+                                        </path>
+                                        <path fill="#FFF2EE" d="M7.172 7.155h-.357v1.256h.357V7.156Z"></path>
+                                        <path fill="#231F20"
+                                            d="M7.28 8.519h-.57V7.048h.572L7.28 8.519Zm-.357-.216h.141v-1.04h-.141v1.04Z">
+                                        </path>
+                                        <path fill="#FFF2EE" d="M6.385 7.155h-.357v1.256h.357V7.156Z"></path>
+                                        <path fill="#231F20"
+                                            d="M6.492 8.519H5.92V7.048h.572v1.471Zm-.357-.216h.142v-1.04h-.142v1.04Z">
+                                        </path>
+                                        <path fill="#FFF2EE"
+                                            d="M6.968 5.829a.05.05 0 0 1 .05 0c.205.131 1.564 1.005 1.527.994-.036-.012-2.837 0-3.087 0-.001 0-.002 0-.003-.002a.006.006 0 0 1-.002-.006l.002-.003 1.513-.983Z">
+                                        </path>
+                                        <path fill="#231F20"
+                                            d="m8.605 6.953-.08-.025c-.144-.006-1.63-.004-3.066 0h-.08l-.05-.157.069-.05 1.514-.984a.155.155 0 0 1 .168 0c.1.066.484.311.842.542.37.24.562.365.657.439h.002c.1.078.088.1.066.147l-.042.088ZM6.995 5.94l-1.188.773a337.38 337.38 0 0 1 2.379-.003c-.257-.168-.67-.434-1.191-.77Z">
+                                        </path>
+                                        <path fill="#020202"
+                                            d="M6.994 6.588a.203.203 0 1 0 0-.407.203.203 0 0 0 0 .407Z"></path>
+                                        <path fill="#FFF2EE" d="M8.283 6.822H5.706v.333h2.577v-.333Z"></path>
+                                        <path fill="#231F20"
+                                            d="M8.39 7.263H5.599v-.55h2.793v.55Zm-2.576-.215h2.361v-.119H5.814v.119Z">
+                                        </path>
+                                        <path fill="#FFF2EE" d="M8.283 8.411H5.706v.407h2.577V8.41Z"></path>
+                                        <path fill="#231F20"
+                                            d="M8.39 8.925H5.599v-.622h2.793v.622Zm-2.576-.216h2.361v-.19H5.814v.19Z">
+                                        </path>
+                                    </svg>
+                                    <div>Finance</div>
+                                </div><span>
+                                    <div>•</div>
+                                    <p class="para">Deferred payment on Logistics with PayLater</p>
+                                </span><span>
+                                    <div>•</div>
+                                    <p class="para">Trade Finance for your Cargo with Export Factoring</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Industries Served -->
+
+        <div class="showcase6">
+            <div class="innerShowcase">
+                <h3 class="heading">Industries Served</h3>
+                <div class="section">
+                    <div class="boxes">
+                        <img src="https://www.cogoport.com/images/chemical.svg" alt="chemical">
+                    </div>
+                    <div class="boxes">
+                        <img src="https://www.cogoport.com/images/paracetamol.svg" alt="paracetamol">
+                    </div>
+                    <div class="boxes">
+                        <img src="https://www.cogoport.com/images/electronics.svg" alt="electronics">
+                    </div>
+                    <div class="boxes" style="margin-top: 22px;">
+                        <img src="https://www.cogoport.com/images/whitegoods.svg" alt="whitegoods">
+                    </div>
+                    <div class="boxes" style="margin-top: 20px;">
+                        <img src="https://www.cogoport.com/images/textiles.svg" alt="textiles">
+                    </div>
+                    <div class="boxes">
+                        <img src="https://www.cogoport.com/images/manufactoring.svg" alt="manufactoring">
+                    </div>
+                    <div class="boxes">
+                        <img src="https://www.cogoport.com/images/agriculture.svg" alt="agriculture">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Get Started Today -->
+
+        <div class="showcase7">
+            <div class="innerShowcase">
+                <div class="section1">
+                    <h2>Get Started Today</h2>
+                    <p>
+                    <p>Plan, Book and Finance your shipment in one place.</p>
+                    Experience how Cogoport’s Global Trade Platform can Turbocharge your Business.
+                    </p>
+                    <a target="_blank" class="aStyling" href="#">Get Started</a>
+                </div>
+                <div class="section2">
+                    <img src="https://cdn.cogoport.io/cms-prod/vault/original/trade-tech-home-1.webp"
+                        alt="product check" class="imageStyling">
+                </div>
+            </div>
+        </div>
+
+        <!-- Grow Faster with Cogoport -->
+
+        <div class="showcase8">
+            <div class="section1">
+                <img class="imageStyling" src="https://cdn.cogoport.io/cms-prod/vault/original/homepage_thumbnail.png"
+                    alt="About Us - Cogoport">
+                <div class="subsection" role="presentation">
+                    <img class="playButton" src="https://cdn.cogoport.io/cms-prod/vault/original/play-button-white.png"
+                        alt="Play Button">
+                </div>
+            </div>
+            <div class="section2">
+                <div class="subsection">
+                    <div class="text">
+                        <h3>Grow Faster with Cogoport</h3>
+                        <p>Know more about Cogoport’s Global Trade Platform<sup>TM</sup></p>
+                    </div>
+                    <a href="#" style="text-decoration: none;">
+                        <button class="button" type="button">
+                            <div class="knowMore">Know More
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14"
+                                    width="1em" height="1em" role="img" style="margin-left: 5px; margin-top: 2px;">
+                                    <path
+                                        d="M4.375 1.724a.64.64 0 0 0-.12.045.639.639 0 0 0-.239.319c-.019.073-.026 1.483-.026 4.918 0 4.214.004 4.83.035 4.933a.532.532 0 0 0 .476.358c.199 0 .109.084 2.716-2.518 1.492-1.488 2.489-2.501 2.519-2.557a.533.533 0 0 0 .008-.432c-.054-.106-4.9-4.96-5.008-5.016a.612.612 0 0 0-.361-.05"
+                                        fill-rule="evenodd">
+                                    </path>
+                                </svg>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blogs -->
+
+        <div class="showcase9">
+            <div class="blogContainer">
+                <h3 class="heading">Blogs</h3>
+                <div class="cardContainer">
+                    <div role="presentation" class="card">
+                        <a href="#">
+                            <img class="imageStyling"
+                                src="https://uploads-ssl.webflow.com/5e57ba59552cf400c593fd16/63aeb89bb337a60f4bf5d90b_2022-23.jpg"
+                                alt="2022: Year in Review">
+                            <div class="cardContent">
+                                <h4 class="title">Industry Trends</h4>
+                                <b>
+                                    <h4 class="name">2022: Year in Review</h4>
+                                </b>
+                                <p class="overview">Since mid-2021, issues with semiconductor chip availability have
+                                    limited the production of a variety of electronic and automobile items.</p>
+                                <div class="readContainer">
+                                    <span role="presentation" class="readMore">Read More
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14"
+                                            width="20" height="20" role="img" style="margin-left: 5px;">
+                                            <path
+                                                d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                fill-rule="evenodd">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <h4 class="cardTitle">30 December 2022</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div role="presentation" class="card">
+                        <a href="#">
+                            <img class="imageStyling"
+                                src="https://uploads-ssl.webflow.com/5e57ba59552cf400c593fd16/63ac3bf741b0cab64ff2c6c7_Bullwhip%20Blog.jpg"
+                                alt="Bullwhip Effect">
+                            <div class="cardContent">
+                                <h4 class="title">Industry Basics</h4>
+                                <h4 class="name">Bullwhip Effect</h4>
+                                <p class="overview">The firms closest to the consumer will increase inventory in
+                                    response to rising demand. The front end of the supply chain will reduce inventory
+                                    when demand declines, compounding the extra inventory on each company further up the
+                                    supply chain.</p>
+                                <div class="readContainer">
+                                    <span role="presentation" class="readMore">Read More
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14"
+                                            width="20" height="20" role="img" style="margin-left: 5px;">
+                                            <path
+                                                d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                fill-rule="evenodd">
+
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <h4 class="cardTitle">30 December 2022</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div role="presentation" class="card">
+                        <a href="#">
+                            <img class="imageStyling"
+                                src="https://uploads-ssl.webflow.com/5e57ba59552cf400c593fd16/63a548a7853f9043ed4eee4d_v5switch-bill-of-Lading.jpg"
+                                alt="Switch Bill of Lading">
+                            <div class="cardContent">
+                                <h4 class="title">Industry Trends</h4>
+                                <h4 class="name">Switch Bill of Lading</h4>
+                                <p class="overview">BL must be revised to reflect modifications to the destination ports
+                                    and the descriptions of the cargo, or in which shippers may wish to omit the
+                                    supplier's name from the bill.</p>
+                                <div class="readContainer">
+                                    <span role="presentation" class="readMore">Read More
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14"
+                                            width="20" height="20" role="img" style="margin-left: 5px;">
+                                            <path
+                                                d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                                fill-rule="evenodd">
+
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    <h4 class="cardTitle">23 December 2022</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="buttonContainer">
+                    <a href="#">
+                        <button class="button" type="button">
+                            <span>View All</span>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subscribe to Our NewsLetter -->
+
+        <div class="showcase10">
+            <div class="section">
+
+            </div>
+            <div class="section1">
+                <img src="https://cdn.cogoport.io/cms-prod/vault/original/cogoport-subscribe.png"
+                    alt="subscribe-letter">
+            </div>
+            <div class="section2">
+                <h3 class="heading">Subscribe to our newsletter now!</h3>
+                <span class="subheading">Don’t miss out on the latest happenings at Cogoport.</span>
+                <div class="inputContainer">
+                    <form class="formContainer">
+                        <div>
+                            <input type="email" placeholder="Enter your email here" required="" value="">
+                        </div>
+                        <div>
+                            <button class="button" type="submit">Subscribe
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 14"
+                                    width="30" height="18" role="img">
+                                    <path
+                                        d="M7.945 2.518c-.184.085-.362.325-.361.485.001.161.077.246 1.648 1.861.858.882 1.563 1.613 1.567 1.625.005.012-1.855.023-4.503.027l-4.511.006-.086.053c-.124.077-.186.22-.186.425s.062.348.186.425l.086.053 4.511.006c2.648.004 4.508.015 4.503.027-.004.012-.709.743-1.567 1.625-1.076 1.106-1.574 1.634-1.604 1.7a.495.495 0 0 0-.044.166c0 .226.305.525.536.525.115 0 .247-.083.427-.268l1.935-1.988c.972-1 1.798-1.835 1.836-1.858.093-.055.199-.275.199-.413 0-.138-.106-.358-.198-.413-.038-.022-.864-.858-1.836-1.857L8.547 2.741c-.256-.263-.402-.316-.602-.223"
+                                        fill-rule="evenodd">
+
+                                    </path>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+
+            <div class="showcase11">
+                <div class="navList">
+                    <span class="mainContainer">Products</span>
+                    <div class="navItemFooter">
+                        <div class="footerItem">
+                            <span class="footerListItem">
+                                <a class="aStyling" href="#">Global Trade
+                                    Platform
+                                </a>
+                            </span>
+                        </div>
+                        <div class="footerItem">
+                            <h4>Cross-border Logistic</h4>
+                            <span class="footerListItem">
+                                <a class="aStyling" href="#">Ocean:
+                                    FCL</a>
+                            </span>
+                            <span class="footerListItem">
+                                <a class="aStyling" href="#">Ocean:
+                                    LCL</a>
+                            </span>
+                            <span class="footerListItem">
+                                <a class="aStyling"
+                                    href="#">International
+                                    Air
+                                </a>
+                            </span>
+                            <span class="footerListItem">
+                                <a class="aStyling"
+                                    href="#">Customs, CFS, and
+                                    Handling</a></span>
+                        </div>
+                        <div class="footerItem">
+                            <h4>Domestic Logistics</h4><span class="footerListItem"><a class="aStyling"
+                                    href="#">Surface: FTL, PTL,
+                                    Rail</a></span><span class="footerListItem"><a class="aStyling"
+                                    href="#">Trailer &amp; Rail Container
+                                    Haulage</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="navList"><span class="mainContainer" style="height: 38px;"></span>
+                    <div class="navItemFooter">
+                        <div class="footerItem">
+                            <h4>Supply Chain Solutions</h4><span class="footerListItem"><a class="aStyling"
+                                    href="#">CogoAssured</a></span><span
+                                class="footerListItem"><a class="aStyling"
+                                    href="#">Fulfilment
+                                    Logistics</a></span><span class="footerListItem"><a class="aStyling"
+                                    href="#">Door
+                                    to Door Shipments</a></span>
+                        </div>
+                        <div class="footerItem">
+                            <h4>Financial Services</h4><span class="footerListItem"><a class="aStyling"
+                                    href="#">Pay
+                                    Later</a></span><span class="footerListItem"><a class="aStyling"
+                                    href="#">Export Factoring</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="navList"><span class="mainContainer">Partners</span>
+                    <div class="navItemFooter">
+                        <div class="footerItem"><span class="footerListItem"><a class="aStyling"
+                                    href="#">Global
+                                    Partner Network</a></span></div>
+                        <div class="footerItem">
+                            <h4>Our Logistics Providers</h4><span class="footerListItem"><a class="aStyling"
+                                    href="#">Freight
+                                    Forwarders</a></span><span class="footerListItem"><a class="aStyling"
+                                    href="#">Transporters</a></span><span
+                                class="footerListItem"><a class="aStyling" href="#">Custom
+                                    Agents</a></span>
+                        </div>
+                        <div class="footerItem">
+                            <h4>Partnership Program</h4><span class="footerListItem"><a class="aStyling"
+                                    href="#">Channel
+                                    Partners</a></span><span class="footerListItem"><a class="aStyling"
+                                    href="#">Overseas
+                                    Agents</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="navList"><span class="mainContainer">Company</span>
+                    <div class="navItemFooter">
+                        <div class="footerItem"><span class="footerListItem"><a class="aStyling"
+                                    href="#">About
+                                    us</a></span><span class="footerListItem"><a class="aStyling"
+                                    href="#">Careers</a></span><span class="footerListItem"><a
+                                    class="aStyling" href="#">Login</a></span><span
+                                class="footerListItem"><a class="aStyling" href="#">Sign
+                                    Up</a></span></div>
+                    </div>
+                </div>
+                <div class="navList"><span class="mainContainer">Knowledge Center</span>
+                    <div class="navItemFooter">
+                        <div class="footerItem"><span class="footerListItem"><a class="aStyling"
+                                    href="#">Blogs</a></span><span class="footerListItem"><a class="aStyling"
+                                    href="#">News &amp; Updates</a></span><span
+                                class="footerListItem"><a class="aStyling"
+                                    href="#">Events</a></span><span
+                                class="footerListItem"><a class="aStyling"
+                                    href="#">Reports</a></span></div>
+                        <div class="footerItem">
+                            <h4>Resources</h4><span class="footerListItem"><a class="aStyling"
+                                    href="#">Port info</a></span><span
+                                class="footerListItem"><a class="aStyling"
+                                    href="#">Shipping
+                                    Terms</a></span><span class="footerListItem"><a class="aStyling"
+                                    href="#">Help Center</a></span><span
+                                class="footerListItem"><a class="aStyling"
+                                    href="#">Incoterms</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase12">
+                <div class="portContainer">
+                    <div class="fclPorts">
+                        <div class="ports">
+                            <a
+                                href="#">Jawaharlal
+                                Nehru (Nhava Sheva) to Jebel Ali
+                            </a>
+                        </div>
+                        <div class="ports">
+                            <a href="#">Mundra to Jebel
+                                Ali
+                            </a>
+                        </div>
+                        <div class="ports">
+                            <a
+                                href="#">Jawaharlal
+                                Nehru (Nhava Sheva) to Colombo
+                            </a>
+                        </div>
+                        <div class="ports">
+                            <a href="#">Mundra to Mombasa</a>
+                        </div>
+                        <div class="ports">
+                            <a
+                                href="#">Shanghai
+                                to Jawaharlal Nehru (Nhava Sheva)
+                            </a>
+                        </div>
+                        <div class="ports">
+                            <a
+                                href="#">Jawaharlal
+                                Nehru (Nhava Sheva) to New York
+                            </a>
+                        </div>
+                        <div class="ports">
+                            <a href="#">Mundra to
+                                Dar es Salaam
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lclPorts">
+                        <div class="ports">
+                            <a
+                                href="#">Jawaharlal
+                                Nehru (Nhava Sheva) to Jebel Ali
+                            </a>
+                        </div>
+                        <div class="ports"><a
+                                href="#">Shanghai
+                                to Jawaharlal Nehru (Nhava Sheva)</a></div>
+                        <div class="ports"><a
+                                href="#">Ningbo
+                                Pt to Jawaharlal Nehru (Nhava Sheva)</a></div>
+                        <div class="ports"><a
+                                href="#">Shenzhen
+                                to Jawaharlal Nehru (Nhava Sheva)</a></div>
+                        <div class="ports"><a
+                                href="#">Mundra to Jebel
+                                Ali</a></div>
+                        <div class="ports"><a
+                                href="#">Qingdao
+                                to Jawaharlal Nehru (Nhava Sheva)</a></div>
+                        <div class="ports"><a
+                                href="#">Shanghai to
+                                Chennai</a></div>
+                    </div>
+                    <div class="airPorts">
+                        <div class="ports"><a
+                                href="#">Chhatrapati
+                                Shivaji International Airport - INBOM to Dubai International Airport - AEDXB</a></div>
+                        <div class="ports"><a
+                                href="#">Indira
+                                Gandhi International Airport - INDEL to Dubai International Airport - AEDXB</a></div>
+                        <div class="ports"><a
+                                href="#">Shanghai
+                                Pudong International Airport - CNPVG to Indira Gandhi International Airport - INDEL</a>
+                        </div>
+                        <div class="ports"><a
+                                href="#">Indira
+                                Gandhi International Airport - INDEL to London Heathrow Airport - GBLHR</a></div>
+                        <div class="ports"><a
+                                href="#">Indira
+                                Gandhi International Airport - INDEL to John F Kennedy International port</a></div>
+                        <div class="ports"><a
+                                href="#">Shenzhen
+                                Bao'an International Airport - CNSZX to Indira Gandhi International Airport - INDEL</a>
+                        </div>
+                        <div class="ports"><a
+                                href="#">Chek
+                                Lap Kok International Airport - HKHKG to Indira Gandhi International Airport - INDEL</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="showcase13">
+                <div class="bottomFooterLeft">
+                    <span class="copyright">© 2023 Cogo Universe PTE. All rights reserved.</span>
+                    <ul class="copyrightList">
+                        <a href="#">
+                            <li role="presentation" class="list">Terms and Conditions |</li>
+                        </a>
+                        <a href="#">
+                            <li role="presentation" class="list">Cookie policy |</li>
+                        </a>
+                        <a href="#">
+                            <li role="presentation" class="list">Privacy and Data Protection Policy</li>
+                        </a>
+                    </ul>
+                    <span class="copyrightListMobile">© 2023 Cogo Universe PTE. All rights reserved.</span>
+                </div>
+                <div class="socialMedia">
+                    <a target="_blank" href="https://in.linkedin.com/company/cogoport">
+                        <img src="images/linkedin.svg" alt="LinkedIn Logo">
+                    </a>
+                    <a target="_blank" href="https://www.facebook.com/Cogoport1/">
+                        <img src="images/facebookLogo.svg" alt="Facebook Logo">
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/cogoport/">
+                        
+                        <img src="images/insta.svg" alt="Instagram Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap'); */
+        @import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Ubuntu&display=swap");
+    </style>
 </body>
+
 </html>
