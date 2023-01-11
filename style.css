@@ -1327,6 +1327,11 @@
     text-decoration: none;
   }
   
+  .showcase12 .portContainer .fclPorts .ports a:hover, .showcase12 .portContainer .lclPorts .ports a:hover, .showcase12 .portContainer .airPorts .ports a:hover {
+    font-weight: 700;
+    color: #ee3425;
+  }
+
   .showcase13 {
     z-index: 10000;
     display: -webkit-box;
